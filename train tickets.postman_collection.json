@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "a04202c4-27b8-4c6f-abd1-d0a47de813bf",
+		"name": "train tickets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12887304"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"ali\",\r\n    \"lastName\":\"mraydi\",\r\n    \"email\":\"alimraydi@gmail.com\",\r\n    \"password\":\"rimes2013\",\r\n    \"mobile\":\"23456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ashrefchaabeni@gmail.com\",\r\n    \"password\":\"rimes2013\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tickets",
+			"item": [
+				{
+					"name": "reserveTicket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjA3MThjOWYyMWU5OTU0MGFmMTdhMSIsImlhdCI6MTY3OTg1ODI3MCwiZXhwIjoxNjc5OTQ0NjcwfQ.YrBZBLidRvO1DpyoccEYGe11Z7n_RBF7XtpndA6MuPI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/ticekts/reserve",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"ticekts",
+								"reserve"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjA3MThjOWYyMWU5OTU0MGFmMTdhMSIsImlhdCI6MTY3OTg3MzkwNywiZXhwIjoxNjc5OTYwMzA3fQ.mT5Jz3oTKLtIczBXypp9lvtG6jO3sdjKW_OiYUZFXYQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"trainName\":\"Lokomotive\",\r\n    \"departueTime\":\"2023-04-01T12:00:00.000Z\",\r\n    \"arrivalTime\":\"2023-04-01T14:00:00.000Z\",\r\n    \"totalSeats\":50\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tickets/create",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tickets",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancel reservation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tickets/cancel",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tickets",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search available seats",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjFiMjMzOTNhZDliNTFmODZmMGM5NSIsImlhdCI6MTY4MDAwOTcwNCwiZXhwIjoxNjgwMDk2MTA0fQ.POrqPOWy4Exj_-qRFbwyqRULDUn_HLTW7PsncEaqAp4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/tickets/searchSeats/giant/2023-04-01T12:00:00.000Z",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tickets",
+								"searchSeats",
+								"giant",
+								"2023-04-01T12:00:00.000Z"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update reservation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tickets/reserve/update",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tickets",
+								"reserve",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
