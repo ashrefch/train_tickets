@@ -1,0 +1,9 @@
+module.exports=async()=>{
+    return{
+        preset:"@shelf/jest-mongodb",
+        verbose:true,
+        bail:1,
+        testMatch:['**/**/*.test.js'],
+        forceExit:true
+    }
+}
